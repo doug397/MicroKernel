@@ -1,10 +1,11 @@
 package br.com.padores.nucleo;
 
+import br.com.padores.interfaces.ICore;
 import br.com.padores.interfaces.IDBControler;
 import br.com.padores.interfaces.IPlugin;
 import br.com.padores.interfaces.IUIControler;
 
-public class Core {
+public class Core implements ICore {
 	
 	private IUIControler controler;
 	private IPlugin pluginControler;
@@ -24,6 +25,12 @@ public class Core {
 	}
 	public IDBControler getDbControler() {
 		return dbControler;
+	}
+
+	@Override
+	public void init() {
+		System.out.println("Inciando Core e seus Componentes");
+		
 	}
 
 	
