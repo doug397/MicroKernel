@@ -30,6 +30,9 @@ public class Core implements ICore {
 	@Override
 	public void init() {
 		System.out.println("Inciando Core e seus Componentes");
+		controler.loadControlers();
+		pluginControler.loadPlugins();
+		dbControler.loadDB();
 		
 	}
 
